@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>BHS Coding Cafe</title>
+  </head>
+  <body>
+    <div class="banner">
+      <img src="images/logoMain.png" id="mainLogo" />
+      <h3 id="randomStr">System.out.println("Welcome")<br /></h3>
+      <h2><br />WELCOME</h2>
+      <table class="navBar">
+        <tr>
+          <th id="linkTO-main">MAIN PAGE</th>
+          <th id="linkTO-codingcomps">CODING COMPETITIONS</th>
+          <th id="linkTO-credits">CREDITS</th>
+        </tr>
+      </table>
+    </div>
+    <br />
+
+    <div id="dec2024Header">
+      <img src="images/dec16-2024LOGO.png" id="dec2024logo" />
+      <h1>
+        <em
+          >12/17/24 - TUESDAY<br />
+          3:00PM</em
+        >
+      </h1>
+      <h1>ROOM H117</h1>
+      <h2>All BHS Students can participate in Java or Python</h2>
+
+      <img id="DEC17LINK" src="images/DEC17Link.png"
+    </div>
+    <script>
+      let random = Math.floor(Math.random() * 10);
+
+      if (random % 2 === 0) {
+        document.getElementById("randomStr").innerHTML = 'print("Welcome")';
+      } else if (random >= 6) {
+        document.getElementById("randomStr").innerHTML =
+          'System.out.println("Welcome")';
+      } else {
+        document.getElementById("randomStr").innerHTML =
+          'console.log("Welcome")';
+      }
+
+      document.getElementById("mainLogo").onclick = function () {
+        window.location.href = "index.html";
+      };
+
+      document.getElementById("DEC17LINK").onclick = function () {
+        window.location.href = "dec17.html";
+      };
+
+      document.getElementById("linkTO-main").onclick = function () {
+        window.location.href = "index.html";
+      };
+      document.getElementById("linkTO-codingcomps").onclick = function () {
+        window.location.href = "dec17.html";
+      };
+      document.getElementById("linkTO-credits").onclick = function () {
+        window.location.href = "credits.html";
+      };
+    </script>
+  </body>
+</html>

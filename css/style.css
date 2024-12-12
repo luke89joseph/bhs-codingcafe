@@ -1,0 +1,149 @@
+body {
+  background-color: brown;
+  background-image: url("https://www.shutterstock.com/image-vector/dark-green-color-deep-emerald-600nw-1184880790.jpg");
+  background-size: auto;
+}
+
+h1 {
+  font-family: Montserrat, Calibri;
+  text-align: center;
+  font-weight: 800;
+}
+#headerMain {
+  font-size: 50px;
+}
+
+h2 {
+  font-family: Montserrat, Calibri;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 0px lightGrey;
+}
+
+h3 {
+  font-family: Courier New, Montserrat, Calibri;
+  text-align: center;
+}
+
+.banner {
+  background-color: rgb(179, 104, 0);
+  color: white;
+  padding: 20px 0px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#dec2024Header {
+  color: yellow;
+  background-image: url(none);
+  background-color: green;
+  background-size: auto;
+
+  padding: 60px 60px;
+  border-radius: 55px;
+  transition: font-size 2s, background-color 2s;
+}
+#dec2024Header:hover {
+  font-size: 25px;
+  background-color: darkGreen;
+}
+
+#mainLogo {
+  margin: auto;
+  display: block;
+  width: 20%;
+  height: 20%;
+  transition: width 1s, height 1s;
+}
+
+#mainLogo:hover {
+  width: 25%;
+  height: 25%;
+}
+
+#dec2024logo {
+  display: block;
+  margin: auto;
+  width: 45%;
+  height: 45%;
+  background-color: rgb(0, 51, 0);
+  border-radius: 15px;
+}
+
+#DEC17LINK {
+  display: block;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  background-color: orange;
+  border-radius: 25px;
+  transition: width 1s, height 1s;
+}
+
+#DEC17LINK:hover {
+  width: 15%;
+  height: 15%;
+}
+
+.countdown {
+  background-color: rgb(214, 160, 10);
+  border-radius: 20px;
+  color: white;
+  padding: 7px 0px;
+}
+
+.red {
+  background-color: maroon;
+  border-radius: 20px;
+  padding: 20px 3px;
+  color: white;
+  margin: 10px 0px;
+}
+
+.ice {
+  background-color: rgb(74, 140, 161);
+  border-radius: 20px;
+  padding: 20px 3px;
+  color: white;
+}
+
+.wood {
+  background-color: rgb(145, 115, 77);
+  border-radius: 20px;
+  padding: 20px 3px;
+  color: white;
+  transition: font-size 4s;
+  font-size: 40px;
+}
+.wood:hover {
+  font-size: 50px;
+}
+.form {
+  text-align: center;
+  margin: 30px 10px;
+  background-color: orange;
+  border-radius: 25px;
+  padding: 20px 0px;
+}
+
+.navBar {
+  background-color: transparent;
+  border-radius: 30px;
+  text-align: center;
+  width: 100%;
+}
+.navBar th {
+  background-color: rgb(75, 54, 29);
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin: 0px 5px;
+  color: white;
+  font-family: Montserrat, Courier New;
+  font-size: 20px;
+  width: 10%;
+}
+
+.navBar th:hover {
+  background-color: rgb(117, 77, 27);
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playwrite DK Loopet:wght@400"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400"
+      rel="stylesheet"
+    />
+    <title>YOUR TEAM - BHS Coding Cafe</title>
+
+    <style>
+      input {
+        font-family: Montserrat, Courier New;
+        font-size: 25px;
+        border-radius: 10px;
+        border-color: darkorange;
+      }
+      #content {
+        padding: 20px 0px;
+        margin: 10px 10px;
+        background-color: rgb(59, 14, 95);
+        border-radius: 25px;
+      }
+      #content2 {
+        padding: 20px 0px;
+        margin: 10px 10px;
+        background-color: rgb(95, 14, 78);
+        border-radius: 25px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="banner">
+      <img src="../images/logoMain.png" id="mainLogo" />
+      <h3 id="randomStr">System.out.println("TEAM LOGIN")<br /></h3>
+      <h2><br />TEAM LOGIN</h2>
+      <table class="navBar">
+        <tr>
+          <th id="linkTO-main">MAIN PAGE</th>
+          <th id="linkTO-codingcomps">CODING COMPETITIONS</th>
+          <th id="linkTO-credits">CREDITS</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="form">
+      <input type="text" placeholder="ENTER TEAM ID" id="teamID" />
+      <input type="button" value="LOGIN" onclick="processTeam()" />
+    </div>
+
+    <div class="ice">
+      <h1 id="teamName">LOADING...</h1>
+    </div>
+    <div id="content">
+      <br />
+      <h2 id="idTEAM">...</h2>
+      <h2 id="codeLang"></h2>
+    </div>
+    <div id="content2">
+      <h2 id="memberLabel">...</h2>
+      <h3 id="teamMembers"></h3>
+  </body>
+
+  <script>
+    let random = Math.floor(Math.random() * 10);
+
+    if (random % 2 === 0) {
+      document.getElementById("randomStr").innerHTML =
+        'print("TEAM LOGIN")';
+    } else if (random >= 6) {
+      document.getElementById("randomStr").innerHTML =
+        'System.out.println("TEAM LOGIN")';
+    } else {
+      document.getElementById("randomStr").innerHTML =
+        'console.log("TEAM LOGIN")';
+    }
+
+    document.getElementById("mainLogo").onclick = function () {
+      window.location.href = "../index.html";
+    };
+
+    function processTeam() {
+      let id = document.getElementById("teamID").value;
+      if (id === "20805") {
+        document.getElementById("teamName").innerHTML = "Rubber Ducks";
+        document.getElementById("idTEAM").innerHTML = "20205";
+        document.getElementById("codeLang").innerHTML = "JAVA";
+        document.getElementById("memberLabel").innerHTML = "TEAM MEMBERS:";
+        document.getElementById("teamMembers").innerHTML = "AARIT SINGH - CAPTAIN <br> TRISHA DHRUV - PLAYER #2 <br> DEEDEE REISS-REINITZ - PLAYER #3";
+      }
+      else if (id === "51917") {
+        document.getElementById("teamName").innerHTML = "Agustus Gloup";
+        document.getElementById("idTEAM").innerHTML = "51917";
+        document.getElementById("codeLang").innerHTML = "JAVA";
+        document.getElementById("memberLabel").innerHTML = "TEAM MEMBERS:";
+        document.getElementById("teamMembers").innerHTML = "AIDEN LEE - CAPTAIN <br> ZAYD RAHMAN - PLAYER #2 <br> LUCAS AGUSTE - PLAYER #3";
+      }
+      else if (id === "77653") {
+        document.getElementById("teamName").innerHTML = "The Baristas";
+        document.getElementById("idTEAM").innerHTML = "77653";
+        document.getElementById("codeLang").innerHTML = "JAVA";
+        document.getElementById("memberLabel").innerHTML = "TEAM MEMBERS:";
+        document.getElementById("teamMembers").innerHTML = "AANYA SHETTY - CAPTAIN <br> NOAH RINKE - PLAYER #2 <br> ALINA VOLNOVA - PLAYER #3";
+      }
+      else {
+        document.getElementById("teamName").innerHTML = "LOGIN FAILED - TEAM DOES NOT EXIST";
+        document.getElementById("idTEAM").innerHTML = "...";
+        document.getElementById("codeLang").innerHTML = "";
+        document.getElementById("memberLabel").innerHTML = "...";
+        document.getElementById("teamMembers").innerHTML = "";
+      }
+    }
+
+    document.getElementById("linkTO-main").onclick = function () {
+        window.location.href = "../index.html";
+      };
+      document.getElementById("linkTO-codingcomps").onclick = function () {
+        window.location.href = "../dec17.html";
+      };
+      document.getElementById("linkTO-credits").onclick = function () {
+        window.location.href = "../credits.html";
+      };
+  </script>
+</html>

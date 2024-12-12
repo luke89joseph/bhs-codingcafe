@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>BHS Coding Cafe</title>
+  </head>
+  <body>
+    <div class="banner">
+      <img src="images/logoMain.png" id="mainLogo" />
+      <h3 id="randomStr">System.out.println("CREDITS")<br /></h3>
+      <h2><br />CREDITS</h2>
+      <table class="navBar">
+        <tr>
+          <th id="linkTO-main">MAIN PAGE</th>
+          <th id="linkTO-codingcomps">CODING COMPETITIONS</th>
+          <th id="linkTO-credits">CREDITS</th>
+        </tr>
+      </table>
+    </div>
+    <br />
+
+    <div class="ice">
+        <h3>Coded on codesandbox.io</h2>
+    </div>
+    <br>
+    <div class="countdown">
+        <h3>Hosted on Github and Gitbook</h2>
+    </div>
+    <br>
+    <div class="ice">
+        <h3>Google Fonts: Montserrat, Playwrite DK Loopet</h3>
+    </div>
+    <div class="red">
+        <h2> Coded by Luke Joseph </h2>
+    </div>
+</body>
+
+    <script>
+      let random = Math.floor(Math.random() * 10);
+
+      if (random % 2 === 0) {
+        document.getElementById("randomStr").innerHTML = 'print("CREDITS")';
+      } else if (random >= 6) {
+        document.getElementById("randomStr").innerHTML =
+          'System.out.println("CREDITS")';
+      } else {
+        document.getElementById("randomStr").innerHTML =
+          'console.log("CREDITS")';
+      }
+
+
+      document.getElementById("linkTO-main").onclick = function () {
+        window.location.href = "index.html";
+      };
+      document.getElementById("linkTO-codingcomps").onclick = function () {
+        window.location.href = "dec17.html";
+      };
+      document.getElementById("linkTO-credits").onclick = function () {
+        window.location.href = "credits.html";
+      };
+    </script>
+  </body>
+</html>

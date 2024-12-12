@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>December Coding Competition - BHS Coding Cafe</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playwrite DK Loopet:wght@400"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400"
+      rel="stylesheet"
+    />
+
+    <style>
+      #introBanner {
+        background-image: url("images/dec17IntroBanner.png");
+        padding: 20px 10px;
+        border-radius: 15px;
+      }
+      #introBannerHEAD {
+        background-color: rgb(71, 107, 16);
+        border-radius: 10px;
+        font-size: 30px;
+        transition: font-size 3s;
+        color: white;
+      }
+      #introBannerHEAD:hover {
+        font-size: 40px;
+      }
+      #introBanner h3 {
+        font-family: Courier;
+      }
+
+      h4 {
+        font-family: Playwrite DK Loopet, Courier New;
+        text-align: center;
+      }
+      #pfp {
+        position: fixed;
+        top: 30px;
+        left: 18px;
+        right: 200;
+        width: 9%;
+        height: 9%
+        margin: 10px 10px;
+        z-index: 1000;
+        border: 3px solid none;
+        border-color: transparent;
+        border-radius: 65px;
+        transition: border-color 1s, background-color 1s;
+
+      }
+      #pfp:hover {
+        border-color: darkorange;
+        background-color: darkorange;
+        border-radius: 65px 65px;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="banner">
+      <img src="images/logoMain.png" id="mainLogo" />
+      <h3 id="randomStr">
+        System.out.println("DECEMBER CODING COMPETITION")<br />
+      </h3>
+      <h2><br />DECEMBER CODING COMPETITION</h2>
+      <table class="navBar">
+        <tr>
+          <th id="linkTO-main">MAIN PAGE</th>
+          <th id="linkTO-codingcomps">CODING COMPETITIONS</th>
+          <th id="linkTO-credits">CREDITS</th>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="countdown">
+      <h1>THERE ARE</h1>
+      <h2 id="count">XX DAYS REMAINING AND XX MINUTES REMAINING</h2>
+    </div>
+    <div id="introBanner">
+      <h1 class="wood">This Holiday Season.. Santa needs YOUR HELP!</h1>
+      <h3 class="red">
+        There is A LOT to do in order to prepare for Christmas, and sometimes it
+        can be hard.. even for Santa! <br />
+        Help Santa and his elves by using the power of code to automate his
+        tasks!
+      </h3>
+      <br />
+      <br />
+      <div class="ice">
+        <h2>COMPETE IN</h2>
+        <h1>JAVA OR PYTHON</h1>
+        <h4>All Skill Levels Welcome!</h4>
+      </div>
+      <br />
+      <div class="ice">
+        <h1>Earn Points in THREE Categories:</h1>
+        <h2>DEBUG, CREATIVE, ORIGINAL SCRIPT</h2>
+      </div>
+    </div>
+    <img src="images/pfp.png" id="pfp" />
+  </body>
+
+  <script>
+    let random = Math.floor(Math.random() * 10);
+
+    if (random % 2 === 0) {
+      document.getElementById("randomStr").innerHTML =
+        'print("DECEMBER CODING COMPETITION")';
+    } else if (random >= 6) {
+      document.getElementById("randomStr").innerHTML =
+        'System.out.println("DECEMBER CODING COMPETITION")';
+    } else {
+      document.getElementById("randomStr").innerHTML =
+        'console.log("DECEMBER CODING COMPETITION")';
+    }
+
+    document.getElementById("mainLogo").onclick = function () {
+      window.location.href = "index.html";
+    };
+
+    document.getElementById("pfp").onclick = function () {
+      window.location.href = "regsteredTeams-dec2024/registered.html";
+    };
+
+    const d = new Date();
+    let daysRemaining = 17 - d.getDate();
+    document.getElementById("count").innerHTML = document.getElementById(
+      "count"
+    ).innerHTML = daysRemaining + " DAYS REMAINING";
+
+    function onstep() {
+      let daysRemaining = 17 - d.getDate();
+      let hoursRemaining = 15 - d.getHours();
+      document.getElementById("count").innerHTML =
+        daysRemaining + " DAYS REMAINING";
+      if (daysRemaining <= 0) {
+        document.getElementById("count").innerHTML =
+          hoursRemaining + " HOURS REMAINING";
+      }
+      if (hoursRemaining <= 0 && daysRemaining <= 0) {
+        document.getElementById("count").innerHTML =
+          "0 HOURS REMAINING, COMPETITION WILL START SOON";
+      }
+    }
+    setInterval(onstep, 1000);
+
+    document.getElementById("linkTO-main").onclick = function () {
+      window.location.href = "index.html";
+    };
+    document.getElementById("linkTO-codingcomps").onclick = function () {
+      window.location.href = "dec17.html";
+    };
+    document.getElementById("linkTO-credits").onclick = function () {
+      window.location.href = "credits.html";
+    };
+  </script>
+</html>
