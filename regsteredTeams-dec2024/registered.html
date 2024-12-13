@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="../image/png" href="images/iconCODE.png" />
     <link href="../css/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
@@ -69,14 +70,24 @@
     <div id="content2">
       <h2 id="memberLabel">...</h2>
       <h3 id="teamMembers"></h3>
+    </div>
+    <div class="footer">
+      <table>
+        <tr>
+          <td><a href="../credits.html">Credits</a></td>
+          <td><a href="../sitemap.html">Sitemap</a></td>
+          <td>Luke Joseph, 2024</td>
+          <td>Coding Cafe BHS</td>
+        </tr>
+      </table>
+    </div>
   </body>
 
   <script>
     let random = Math.floor(Math.random() * 10);
 
     if (random % 2 === 0) {
-      document.getElementById("randomStr").innerHTML =
-        'print("TEAM LOGIN")';
+      document.getElementById("randomStr").innerHTML = 'print("TEAM LOGIN")';
     } else if (random >= 6) {
       document.getElementById("randomStr").innerHTML =
         'System.out.println("TEAM LOGIN")';
@@ -96,24 +107,25 @@
         document.getElementById("idTEAM").innerHTML = "20805";
         document.getElementById("codeLang").innerHTML = "JAVA";
         document.getElementById("memberLabel").innerHTML = "TEAM MEMBERS:";
-        document.getElementById("teamMembers").innerHTML = "AARIT SINGH - CAPTAIN <br> TRISHA DHRUV - PLAYER #2 <br> DEEDEE REISS-REINITZ - PLAYER #3";
-      }
-      else if (id === "51917") {
+        document.getElementById("teamMembers").innerHTML =
+          "AARIT SINGH - CAPTAIN <br> TRISHA DHRUV - PLAYER #2 <br> DEEDEE REISS-REINITZ - PLAYER #3";
+      } else if (id === "51917") {
         document.getElementById("teamName").innerHTML = "Agustus Gloup";
         document.getElementById("idTEAM").innerHTML = "51917";
         document.getElementById("codeLang").innerHTML = "JAVA";
         document.getElementById("memberLabel").innerHTML = "TEAM MEMBERS:";
-        document.getElementById("teamMembers").innerHTML = "AIDEN LEE - CAPTAIN <br> ZAYD RAHMAN - PLAYER #2 <br> LUCAS AGUSTE - PLAYER #3";
-      }
-      else if (id === "77653") {
+        document.getElementById("teamMembers").innerHTML =
+          "AIDEN LEE - CAPTAIN <br> ZAYD RAHMAN - PLAYER #2 <br> LUCAS AGUSTE - PLAYER #3";
+      } else if (id === "77653") {
         document.getElementById("teamName").innerHTML = "The Baristas";
         document.getElementById("idTEAM").innerHTML = "77653";
         document.getElementById("codeLang").innerHTML = "JAVA";
         document.getElementById("memberLabel").innerHTML = "TEAM MEMBERS:";
-        document.getElementById("teamMembers").innerHTML = "AANYA SHETTY - CAPTAIN <br> NOAH RINKE - PLAYER #2 <br> ALINA VOLNOVA - PLAYER #3";
-      }
-      else {
-        document.getElementById("teamName").innerHTML = "LOGIN FAILED - TEAM DOES NOT EXIST";
+        document.getElementById("teamMembers").innerHTML =
+          "AANYA SHETTY - CAPTAIN <br> NOAH RINKE - PLAYER #2 <br> ALINA VOLNOVA - PLAYER #3";
+      } else {
+        document.getElementById("teamName").innerHTML =
+          "LOGIN FAILED - TEAM DOES NOT EXIST";
         document.getElementById("idTEAM").innerHTML = "...";
         document.getElementById("codeLang").innerHTML = "";
         document.getElementById("memberLabel").innerHTML = "...";
@@ -122,13 +134,13 @@
     }
 
     document.getElementById("linkTO-main").onclick = function () {
-        window.location.href = "../index.html";
-      };
-      document.getElementById("linkTO-codingcomps").onclick = function () {
-        window.location.href = "../dec17.html";
-      };
-      document.getElementById("linkTO-credits").onclick = function () {
-        window.location.href = "../credits.html";
-      };
+      window.location.href = "../index.html";
+    };
+    document.getElementById("linkTO-codingcomps").onclick = function () {
+      window.location.href = "../dec17.html";
+    };
+    document.getElementById("linkTO-credits").onclick = function () {
+      window.location.href = "../credits.html";
+    };
   </script>
 </html>

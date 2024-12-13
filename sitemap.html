@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="images/iconCODE.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Sitemap - BHS Coding Cafe</title>
+    <style>
+      .banner {
+        background-color: lightgrey;
+      }
+      body {
+        background-image: none;
+        background-color: white;
+      }
+      h2 {
+        color: black;
+      }
+      h3 {
+        color: black;
+      }
+      #mainLogo:hover {
+        width: 22%;
+        height: 22%;
+      }
+      h4 {
+        color: black;
+        font-family: Montserrat;
+      }
+      h3 {
+        color: black;
+        font-family: Montserrat;
+      }
+
+      h3:hover {
+        color: rgb(75, 75, 75);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <img src="images/logoMain.png" id="mainLogo" />
+      <h2>Sitemap</h2>
+      <h4>Everything, in one place.</h4>
+    </div>
+    <br />
+    <br />
+    <a href="index.html"><h3>Home</h3></a>
+    <br />
+    <a href="dec17.html"><h3>Coding Competitions</h3></a>
+    <a href="regsteredTeams-dec2024/registered.html"><h3>Team Login</h3></a>
+    <br />
+    <a href="credits.html"><h3>Credits</h3></a>
+  </body>
+
+  <script>
+    document.getElementById("mainLogo").onclick = function () {
+      window.location.href = "index.html";
+    };
+  </script>
+</html>

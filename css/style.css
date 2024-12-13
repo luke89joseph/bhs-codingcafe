@@ -147,3 +147,23 @@ h3 {
 .navBar th:hover {
   background-color: rgb(117, 77, 27);
 }
+
+.footer {
+  background-color: darkorange;
+  border-radius: 20px;
+  font-family: Montserrat, monospace;
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+}
+.footer td {
+  padding: 20px 10px;
+  font-size: 20px;
+}
+
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  color: rgb(136, 72, 11);
+}
