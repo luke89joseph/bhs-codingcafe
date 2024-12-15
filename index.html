@@ -6,6 +6,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
       rel="stylesheet"
     />
+
     <link href="css/style.css" rel="stylesheet" />
 
     <title>BHS Coding Cafe</title>
@@ -49,36 +50,46 @@
         </tr>
       </table>
     </div>
-    <script>
-      let random = Math.floor(Math.random() * 10);
+    <alert-box
+      content="Coding Cafe's Coding Competition is on Dec 17th, Tuesday. We hope you can attend! <br><br> Registration closes by Dec 16th @ 8:00 PM"
+      title="Hello!"
+      colorMain = "teal"
+      colorWall = "skyblue"
+      colorText = "white"
+      fontFamily = "Montserrat, Monospace"
+      fromRight = "2"
+      curve = "15px"
+    />
 
-      if (random % 2 === 0) {
-        document.getElementById("randomStr").innerHTML = 'print("Welcome")';
-      } else if (random >= 6) {
-        document.getElementById("randomStr").innerHTML =
-          'System.out.println("Welcome")';
-      } else {
-        document.getElementById("randomStr").innerHTML =
-          'console.log("Welcome")';
-      }
+  <script src="stylo_build1.js"></script>
+  <script>
+    let random = Math.floor(Math.random() * 10);
 
-      document.getElementById("mainLogo").onclick = function () {
-        window.location.href = "index.html";
-      };
+    if (random % 2 === 0) {
+      document.getElementById("randomStr").innerHTML = 'print("Welcome")';
+    } else if (random >= 6) {
+      document.getElementById("randomStr").innerHTML =
+        'System.out.println("Welcome")';
+    } else {
+      document.getElementById("randomStr").innerHTML = 'console.log("Welcome")';
+    }
 
-      document.getElementById("DEC17LINK").onclick = function () {
-        window.location.href = "dec17.html";
-      };
+    document.getElementById("mainLogo").onclick = function () {
+      window.location.href = "index.html";
+    };
 
-      document.getElementById("linkTO-main").onclick = function () {
-        window.location.href = "index.html";
-      };
-      document.getElementById("linkTO-codingcomps").onclick = function () {
-        window.location.href = "dec17.html";
-      };
-      document.getElementById("linkTO-credits").onclick = function () {
-        window.location.href = "credits.html";
-      };
-    </script>
-  </body>
+    document.getElementById("DEC17LINK").onclick = function () {
+      window.location.href = "dec17.html";
+    };
+
+    document.getElementById("linkTO-main").onclick = function () {
+      window.location.href = "index.html";
+    };
+    document.getElementById("linkTO-codingcomps").onclick = function () {
+      window.location.href = "dec17.html";
+    };
+    document.getElementById("linkTO-credits").onclick = function () {
+      window.location.href = "credits.html";
+    };
+  </script>
 </html>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="icon" type="image/png" href="images/iconCODE.png" />
+
     <title>December Coding Competition - BHS Coding Cafe</title>
     <link href="css/style.css" rel="stylesheet" />
     <link
@@ -95,6 +96,7 @@
         Submit form by email to 81415092@briarcliffny.org, or hand in physical
         copy to room H117/706
       </h3>
+      <h3 id="signupCount">Signups/registration closed</h3>
       <a
         href="DECEMBER CODING COMPETITION.pdf"
         download="DECEMBER CODING COMPETITION.pdf"
@@ -174,30 +176,53 @@
     };
 
     document.getElementById("pfp").onclick = function () {
-      window.location.href = "regsteredTeams-dec2024/registered.html";
+      window.location.href =
+        "codeComps_registeredTeams/registered_dec2024.html";
     };
 
     const d = new Date();
-    let daysRemaining = 17 - d.getDate();
-    document.getElementById("count").innerHTML = document.getElementById(
-      "count"
-    ).innerHTML = daysRemaining + " DAYS REMAINING";
 
-    function onstep() {
-      let daysRemaining = 17 - d.getDate();
-      let hoursRemaining = 15 - d.getHours();
+    let daysRemaining = 17 - d.getDate();
+    let hoursRemaining = 15 - d.getHours();
+    document.getElementById("count").innerHTML =
+      daysRemaining + " DAYS REMAINING";
+    if (daysRemaining === 1) {
       document.getElementById("count").innerHTML =
-        daysRemaining + " DAYS REMAINING";
-      if (daysRemaining <= 0) {
+        daysRemaining + " DAY REMAINING";
+    }
+    if (daysRemaining <= 0) {
+      document.getElementById("count").innerHTML =
+        hoursRemaining + " HOURS REMAINING";
+      if (hoursRemaining === 1) {
         document.getElementById("count").innerHTML =
-          hoursRemaining + " HOURS REMAINING";
-      }
-      if (hoursRemaining <= 0 && daysRemaining <= 0) {
-        document.getElementById("count").innerHTML =
-          "0 HOURS REMAINING, COMPETITION WILL START SOON";
+          daysRemaining + " HOUR REMAINING";
       }
     }
-    setInterval(onstep, 1000);
+    if (hoursRemaining <= 0 && daysRemaining <= 0) {
+      document.getElementById("count").innerHTML =
+        "0 HOURS REMAINING, COMPETITION WILL START SOON";
+    }
+
+    daysRemaining = 16 - d.getDate();
+    hoursRemaining = 20 - d.getHours();
+    if (daysRemaining > 0) {
+      document.getElementById("signupCount").innerHTML =
+        daysRemaining + " MORE DAYS TO SIGNUP";
+      if (daysRemaining == 1) {
+        document.getElementById("signupCount").innerHTML =
+          daysRemaining + " MORE DAY TO SIGNUP";
+      }
+    } else if (hoursRemaining > 0) {
+      document.getElementById("signupCount").innerHTML =
+        hoursRemaining + " MORE HOURS TO SIGNUP";
+      if (hoursRemaining == 1) {
+        document.getElementById("signupCount").innerHTML =
+          hoursRemaining + " MORE HOUR TO SIGNUP";
+      }
+    } else {
+      document.getElementById("signupCount").innerHTML =
+        "SIGNUPS/REGISTRATION CLOSED";
+    }
 
     document.getElementById("linkTO-main").onclick = function () {
       window.location.href = "index.html";
