@@ -75,6 +75,13 @@ class alertBox extends HTMLElement {
     this.font = this.getAttribute("fontFamily");
     this.p1 = this.getAttribute("fromTop");
     this.p2 = this.getAttribute("fromRight");
+    this.p3 = this.getAttribute("fromLeft");
+
+    if (sessionStorage.getItem("visited") === null) {
+      sessionStorage.setItem("visited", true);
+    } else {
+      this.parentNode.removeChild(this);
+    }
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -88,7 +95,7 @@ class alertBox extends HTMLElement {
           padding-right: 10px;
           margin: 5px 10px;
           position:fixed;
-          left: 80%; 
+          left: ${this.p3}%; 
           right: ${this.p2}%;
           top: 2%;
           border-left:  ${this.c2} solid 15px;
