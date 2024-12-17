@@ -71,6 +71,10 @@
         width: 15%;
         height: 15%;
       }
+
+      a {
+        color: white;
+      }
     </style>
   </head>
 
@@ -91,26 +95,30 @@
     </div>
     <br />
     <div class="ice">
-      <h1>SIGN UP TODAY!</h1>
+      <h1>COMPETITION HAS BEGUN</h1>
       <h3>
-        Submit form by email to 81415092@briarcliffny.org, or hand in physical
-        copy to room H117/706
+        <a href="https://keepthescore.com/board/tbxptmgwwvswr/"
+          >View the Leaderboard HERE
+        </a>
       </h3>
-      <h3>Signups/registration closed</h3>
-      <a
-        href="DECEMBER CODING COMPETITION.pdf"
-        download="DECEMBER CODING COMPETITION.pdf"
-        >"<img src="images/DEC17Link.png" id="downloadForm" class="link"
-      /></a>
+      <h3>
+        <a
+          href="https://drive.google.com/drive/folders/1mV0Q981D9IzRikyKMmvjUim-MJ2Usb7E?usp=share_link"
+        >
+          View Source Code for Debug Problems Here - JAVA
+        </a>
+      </h3>
+      <h3>
+        <a
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=gamCU_emuk25U_DseFKB6xn4ONpeDsRIkyylOtZNJwhUNUwzR0hLN0k3R09KQk5GWk9CVkpNTklDNi4u"
+          >SUBMIT RESPONSES HERE</a
+        >
+      </h3>
     </div>
     <br />
     <br />
     <br />
     <br />
-    <div class="countdown">
-      <h1>THERE ARE</h1>
-      <h2 id="count">XX DAYS REMAINING AND XX MINUTES REMAINING</h2>
-    </div>
     <div id="introBanner">
       <h1 class="wood">This Holiday Season.. Santa needs YOUR HELP!</h1>
       <h3 class="red">
@@ -181,48 +189,6 @@
     };
 
     const d = new Date();
-
-    let daysRemaining = 17 - d.getDate();
-    let hoursRemaining = 15 - d.getHours();
-    document.getElementById("count").innerHTML =
-      daysRemaining + " DAYS REMAINING";
-    if (daysRemaining === 1) {
-      document.getElementById("count").innerHTML =
-        daysRemaining + " DAY REMAINING";
-    }
-    if (daysRemaining <= 0) {
-      document.getElementById("count").innerHTML =
-        hoursRemaining + " HOURS REMAINING";
-      if (hoursRemaining === 1) {
-        document.getElementById("count").innerHTML =
-          daysRemaining + " HOUR REMAINING";
-      }
-    }
-    if (hoursRemaining <= 0 && daysRemaining <= 0) {
-      document.getElementById("count").innerHTML =
-        "0 HOURS REMAINING, COMPETITION WILL START SOON";
-    }
-
-    daysRemaining = 16 - d.getDate();
-    hoursRemaining = 20 - d.getHours();
-    if (daysRemaining > 0) {
-      document.getElementById("signupCount").innerHTML =
-        daysRemaining + " MORE DAYS TO SIGNUP";
-      if (daysRemaining == 1) {
-        document.getElementById("signupCount").innerHTML =
-          daysRemaining + " MORE DAY TO SIGNUP";
-      }
-    } else if (hoursRemaining > 0) {
-      document.getElementById("signupCount").innerHTML =
-        hoursRemaining + " MORE HOURS TO SIGNUP";
-      if (hoursRemaining == 1) {
-        document.getElementById("signupCount").innerHTML =
-          hoursRemaining + " MORE HOUR TO SIGNUP";
-      }
-    } else {
-      document.getElementById("signupCount").innerHTML =
-        "SIGNUPS/REGISTRATION CLOSED";
-    }
 
     document.getElementById("linkTO-main").onclick = function () {
       window.location.href = "index.html";

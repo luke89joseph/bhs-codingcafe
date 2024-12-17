@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="../image/png" href="images/iconCODE.png" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playwrite DK Loopet:wght@400"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400"
+      rel="stylesheet"
+    />
+    <title>LIVE SCOREBOARD - BHS Coding Cafe</title>
+  </head>
+  <body>
+    <div class="banner">
+      <img src="../images/logoMain.png" id="mainLogo" />
+      <h3 id="randomStr">System.out.println("- LIVE SCOREBOARD -")<br /></h3>
+      <h2><br />- LIVE SCOREBOARD -</h2>
+      <table class="navBar">
+        <tr>
+          <th id="linkTO-main">MAIN PAGE</th>
+          <th id="linkTO-codingcomps">CODING COMPETITIONS</th>
+          <th id="linkTO-credits">CREDITS</th>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <br />
+    <iframe
+      id="iframe-tbxptmgwwvswr"
+      src="https://keepthescore.com/board/tbxptmgwwvswr/"
+      style="
+        width: 100%;
+        height: 1000px;
+        border-radius: 25px;
+        display: inlineblock;
+        text-align: center;
+        overflow: hidden;
+      "
+    ></iframe>
+    <div class="footer">
+      <table>
+        <tr>
+          <td><a href="../credits.html">Credits</a></td>
+          <td><a href="../sitemap.html">Sitemap</a></td>
+          <td>Luke Joseph, 2024</td>
+          <td>Coding Cafe BHS</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  </body>
+  <script src="../stylo_build1.js"></script>
+  <script>
+    document.getElementById("linkTO-main").onclick = function () {
+      window.location.href = "../index.html";
+    };
+    document.getElementById("linkTO-codingcomps").onclick = function () {
+      window.location.href = "../dec17.html";
+    };
+    document.getElementById("linkTO-credits").onclick = function () {
+      window.location.href = "../credits.html";
+    };
+    document.getElementById("mainLogo").onclick = function () {
+      window.location.href = "../index.html";
+    };
+  </script>
+</html>
